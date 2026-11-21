@@ -35,5 +35,9 @@
   "christmaspresents.config.anyoneCanOpen": "誰でも開けられる",
   "christmaspresents.config.anyoneCanOpen.desc": "タグの名前のプレイヤーだけでなく、誰でもどのプレゼントでも開けられます。",
   "christmaspresents.missing_mycel": "Mycel がありません。%s は Mycel ライブラリが必要で、インストールされるまで動作しません。",
-  "christmaspresents.missing_mycel.download": "[Mycel をダウンロード]"
+  "christmaspresents.missing_mycel.download": "[Mycel をダウンロード]",
+  "subtitles.christmaspresents.present.unwrap": "プレゼントを開ける",
+  "subtitles.christmaspresents.present.pop": "プレゼントのふたが外れる",
+  "subtitles.christmaspresents.present.reveal": "プレゼントがきらめく",
+  "subtitles.christmaspresents.present.wrap": "プレゼントを包む"
 }

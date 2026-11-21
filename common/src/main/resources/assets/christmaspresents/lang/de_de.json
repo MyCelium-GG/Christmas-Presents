@@ -35,5 +35,9 @@
   "christmaspresents.config.anyoneCanOpen": "Jeder darf öffnen",
   "christmaspresents.config.anyoneCanOpen.desc": "Jeder kann jedes Geschenk öffnen, nicht nur der Spieler auf dem Anhänger.",
   "christmaspresents.missing_mycel": "Mycel fehlt. %s braucht die Mycel-Bibliothek und bleibt aus, bis sie installiert ist.",
-  "christmaspresents.missing_mycel.download": "[Mycel herunterladen]"
+  "christmaspresents.missing_mycel.download": "[Mycel herunterladen]",
+  "subtitles.christmaspresents.present.unwrap": "Geschenk wird ausgepackt",
+  "subtitles.christmaspresents.present.pop": "Geschenkdeckel springt ab",
+  "subtitles.christmaspresents.present.reveal": "Geschenke funkeln",
+  "subtitles.christmaspresents.present.wrap": "Geschenk eingepackt"
 }

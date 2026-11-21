@@ -6,8 +6,6 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.inventory.HopperMenu;
 
 /** What the wrapping menu sends to the server. */
@@ -77,8 +75,7 @@ public final class PresentPackets {
         }
         present.wrap(player);
         player.closeContainer();
-        player.level().playSound(null, packet.pos(), SoundEvents.BOOK_PUT, SoundSource.BLOCKS, 1.0f, 1.0f);
-        player.level().playSound(null, packet.pos(), SoundEvents.WOOL_PLACE, SoundSource.BLOCKS, 0.8f, 1.3f);
+        PresentSounds.play(player.level(), packet.pos(), "present.wrap", 1.0f);
         ChristmasPresentsStats.wrapped();
     }
 

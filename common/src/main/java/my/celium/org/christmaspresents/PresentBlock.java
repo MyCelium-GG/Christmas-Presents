@@ -141,7 +141,7 @@ public final class PresentBlock extends Block implements EntityBlock {
         }
         if (player.isShiftKeyDown() && present.isFrom(player)) {
             present.unwrapForEditing();
-            level.playSound(null, pos, SoundEvents.BOOK_PAGE_TURN, SoundSource.BLOCKS, 1.0f, 1.2f);
+            PresentSounds.play(level, pos, "present.wrap", 0.85f);
             openMenu(serverPlayer, present, pos);
             return InteractionResult.CONSUME;
         }

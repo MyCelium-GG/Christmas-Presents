@@ -35,5 +35,9 @@
   "christmaspresents.config.anyoneCanOpen": "Открыть может любой",
   "christmaspresents.config.anyoneCanOpen.desc": "Любой игрок может открыть любой подарок, а не только тот, чьё имя на бирке.",
   "christmaspresents.missing_mycel": "Mycel не установлен. %s нужна библиотека Mycel, без неё мод не работает.",
-  "christmaspresents.missing_mycel.download": "[Скачать Mycel]"
+  "christmaspresents.missing_mycel.download": "[Скачать Mycel]",
+  "subtitles.christmaspresents.present.unwrap": "Подарок распаковывают",
+  "subtitles.christmaspresents.present.pop": "Крышка подарка отлетает",
+  "subtitles.christmaspresents.present.reveal": "Подарки сверкают",
+  "subtitles.christmaspresents.present.wrap": "Подарок упакован"
 }
