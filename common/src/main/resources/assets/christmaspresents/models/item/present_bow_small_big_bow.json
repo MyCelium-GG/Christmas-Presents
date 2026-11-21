@@ -1,0 +1,234 @@
+{
+  "textures": {
+    "ribbon": "christmaspresents:block/present_ribbon",
+    "particle": "christmaspresents:block/present_ribbon"
+  },
+  "elements": [
+    {
+      "from": [
+        6.875,
+        7.6,
+        6.875
+      ],
+      "to": [
+        9.125,
+        8.912,
+        9.125
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      }
+    },
+    {
+      "from": [
+        4.062,
+        7.975,
+        7.25
+      ],
+      "to": [
+        7.625,
+        10.412,
+        8.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      },
+      "rotation": {
+        "angle": -22.5,
+        "axis": "z",
+        "origin": [
+          7.4375,
+          8.25625,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        8.375,
+        7.975,
+        7.25
+      ],
+      "to": [
+        11.938,
+        10.412,
+        8.75
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      },
+      "rotation": {
+        "angle": 22.5,
+        "axis": "z",
+        "origin": [
+          8.5625,
+          8.25625,
+          8
+        ]
+      }
+    },
+    {
+      "from": [
+        7.3,
+        7.55,
+        8.5
+      ],
+      "to": [
+        8.7,
+        7.7,
+        11.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      },
+      "rotation": {
+        "angle": 22.5,
+        "axis": "y",
+        "origin": [
+          8,
+          7.6,
+          8.5
+        ]
+      }
+    },
+    {
+      "from": [
+        7.3,
+        7.55,
+        8.5
+      ],
+      "to": [
+        8.7,
+        7.7,
+        11.875
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      },
+      "rotation": {
+        "angle": -22.5,
+        "axis": "y",
+        "origin": [
+          8,
+          7.6,
+          8.5
+        ]
+      }
+    }
+  ]
+}

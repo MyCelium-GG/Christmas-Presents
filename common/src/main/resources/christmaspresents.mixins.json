@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "my.celium.org.christmaspresents.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CreativeModeTabMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "client.BlockEntityRenderersInvoker",
+    "client.HideHandsMixin",
+    "client.MenuScreensMixin",
+    "client.PlayerModelMixin"
+  ]
+}

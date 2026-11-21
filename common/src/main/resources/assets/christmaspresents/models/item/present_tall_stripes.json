@@ -1,0 +1,238 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "paper": "christmaspresents:block/present_stripes",
+    "ribbon": "christmaspresents:block/present_ribbon",
+    "particle": "christmaspresents:block/present_stripes"
+  },
+  "elements": [
+    {
+      "from": [
+        4.0,
+        0,
+        4.0
+      ],
+      "to": [
+        12.0,
+        14,
+        12.0
+      ],
+      "faces": {
+        "north": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "down": {
+          "texture": "#paper",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        3.5,
+        11.5,
+        3.5
+      ],
+      "to": [
+        12.5,
+        14.5,
+        12.5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#paper",
+          "tintindex": 0
+        },
+        "down": {
+          "texture": "#paper",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        0,
+        3.9
+      ],
+      "to": [
+        9,
+        14,
+        12.1
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      }
+    },
+    {
+      "from": [
+        3.9,
+        0,
+        7
+      ],
+      "to": [
+        12.1,
+        14,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      }
+    },
+    {
+      "from": [
+        7,
+        11.4,
+        3.35
+      ],
+      "to": [
+        9,
+        14.6,
+        12.65
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      }
+    },
+    {
+      "from": [
+        3.35,
+        11.4,
+        7
+      ],
+      "to": [
+        12.65,
+        14.62,
+        9
+      ],
+      "faces": {
+        "north": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "south": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "east": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "west": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "up": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        },
+        "down": {
+          "texture": "#ribbon",
+          "tintindex": 1
+        }
+      }
+    }
+  ]
+}

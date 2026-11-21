@@ -1,0 +1,869 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "cases": [
+          {
+            "when": "cube",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 1,
+              "cases": [
+                {
+                  "when": "plain",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_cube_plain",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stripes",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_cube_stripes",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "dots",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_cube_dots",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stars",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_cube_stars",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_cube_plain",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "tall",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 1,
+              "cases": [
+                {
+                  "when": "plain",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_tall_plain",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stripes",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_tall_stripes",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "dots",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_tall_dots",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stars",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_tall_stars",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_tall_plain",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "wide",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 1,
+              "cases": [
+                {
+                  "when": "plain",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_wide_plain",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stripes",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_wide_stripes",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "dots",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_wide_dots",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stars",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_wide_stars",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_wide_plain",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "small",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 1,
+              "cases": [
+                {
+                  "when": "plain",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_small_plain",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stripes",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_small_stripes",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "dots",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_small_dots",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "stars",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_small_stars",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_small_plain",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "christmaspresents:item/present_cube_plain",
+          "tints": [
+            {
+              "type": "minecraft:custom_model_data",
+              "index": 0,
+              "default": -3790808
+            },
+            {
+              "type": "minecraft:custom_model_data",
+              "index": 1,
+              "default": -865972
+            }
+          ]
+        }
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 0,
+        "cases": [
+          {
+            "when": "cube",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 2,
+              "cases": [
+                {
+                  "when": "bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_cube_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "big_bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_cube_big_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "rosette",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_cube_rosette",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "knot",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_cube_knot",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_bow_cube_bow",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "tall",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 2,
+              "cases": [
+                {
+                  "when": "bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_tall_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "big_bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_tall_big_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "rosette",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_tall_rosette",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "knot",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_tall_knot",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_bow_tall_bow",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "wide",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 2,
+              "cases": [
+                {
+                  "when": "bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_wide_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "big_bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_wide_big_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "rosette",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_wide_rosette",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "knot",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_wide_knot",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_bow_wide_bow",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "when": "small",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 2,
+              "cases": [
+                {
+                  "when": "bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_small_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "big_bow",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_small_big_bow",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "rosette",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_small_rosette",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                },
+                {
+                  "when": "knot",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "christmaspresents:item/present_bow_small_knot",
+                    "tints": [
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 0,
+                        "default": -3790808
+                      },
+                      {
+                        "type": "minecraft:custom_model_data",
+                        "index": 1,
+                        "default": -865972
+                      }
+                    ]
+                  }
+                }
+              ],
+              "fallback": {
+                "type": "minecraft:model",
+                "model": "christmaspresents:item/present_bow_small_bow",
+                "tints": [
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 0,
+                    "default": -3790808
+                  },
+                  {
+                    "type": "minecraft:custom_model_data",
+                    "index": 1,
+                    "default": -865972
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "christmaspresents:item/present_bow_cube_bow",
+          "tints": [
+            {
+              "type": "minecraft:custom_model_data",
+              "index": 0,
+              "default": -3790808
+            },
+            {
+              "type": "minecraft:custom_model_data",
+              "index": 1,
+              "default": -865972
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
