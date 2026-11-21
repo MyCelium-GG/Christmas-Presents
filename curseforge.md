@@ -30,7 +30,6 @@ If a present is not for you, it does not open: you get bumped back, the present 
 
 ## Good to know
 
-- Its own sounds: paper tearing, the lid popping off with sleigh bells and a chime as the gifts come out
 - A present keeps everything when you break it: its gifts, look and name. Pick it up, carry it to the tree, place it again
 - Whoever wrapped a present can sneak + right-click it to unwrap it again and change something
 - Settings: only open presents from December 24 to 26 (with a countdown until then), or let anyone open any present

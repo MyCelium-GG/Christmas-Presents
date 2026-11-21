@@ -35,9 +35,5 @@
   "christmaspresents.config.anyoneCanOpen": "Iedereen mag openen",
   "christmaspresents.config.anyoneCanOpen.desc": "Iedereen kan elk cadeau openen, niet alleen de speler op het label.",
   "christmaspresents.missing_mycel": "Mycel ontbreekt. %s heeft de Mycel-bibliotheek nodig en blijft uit tot die is geïnstalleerd.",
-  "christmaspresents.missing_mycel.download": "[Mycel downloaden]",
-  "subtitles.christmaspresents.present.unwrap": "Cadeau uitgepakt",
-  "subtitles.christmaspresents.present.pop": "Cadeaudeksel springt eraf",
-  "subtitles.christmaspresents.present.reveal": "Cadeaus fonkelen",
-  "subtitles.christmaspresents.present.wrap": "Cadeau ingepakt"
+  "christmaspresents.missing_mycel.download": "[Mycel downloaden]"
 }

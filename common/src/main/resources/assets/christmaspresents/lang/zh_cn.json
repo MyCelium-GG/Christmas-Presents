@@ -35,9 +35,5 @@
   "christmaspresents.config.anyoneCanOpen": "任何人都能打开",
   "christmaspresents.config.anyoneCanOpen.desc": "任何人都能打开任何礼物,而不只是标签上的玩家。",
   "christmaspresents.missing_mycel": "缺少 Mycel。%s 需要 Mycel 库才能运行，安装前不会生效。",
-  "christmaspresents.missing_mycel.download": "[下载 Mycel]",
-  "subtitles.christmaspresents.present.unwrap": "拆开礼物",
-  "subtitles.christmaspresents.present.pop": "礼物盒盖弹开",
-  "subtitles.christmaspresents.present.reveal": "礼物闪闪发光",
-  "subtitles.christmaspresents.present.wrap": "礼物包好了"
+  "christmaspresents.missing_mycel.download": "[下载 Mycel]"
 }

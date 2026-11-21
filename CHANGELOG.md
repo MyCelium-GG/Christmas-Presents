@@ -9,5 +9,4 @@
 - Not your present? You get bumped back, the present wobbles and says whose it is.
 - A present keeps its gifts, look and name when you break it, and whoever wrapped it can sneak + right-click to unwrap it again.
 - Settings: only open presents from December 24 to 26, or let anyone open any present.
-- Its own sounds: paper tearing open, the lid popping off with sleigh bells, a chime when the gifts come out, and wrapping (with subtitles).
 - In 11 languages.

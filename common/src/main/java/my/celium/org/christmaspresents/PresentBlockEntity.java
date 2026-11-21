@@ -148,7 +148,8 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         openStart = serverLevel.getGameTime();
         opener = player.getUUID();
         sync();
-        PresentSounds.play(serverLevel, worldPosition, "present.unwrap", 1.0f);
+        serverLevel.playSound(null, worldPosition, SoundEvents.BOOK_PAGE_TURN, SoundSource.BLOCKS, 1.0f, 0.7f);
+        serverLevel.playSound(null, worldPosition, SoundEvents.WOOL_BREAK, SoundSource.BLOCKS, 0.6f, 1.4f);
         if (!from.isEmpty() && !from.equalsIgnoreCase(player.getGameProfile().name())) {
             player.sendOverlayMessage(Component.translatable("christmaspresents.from_message", from)
                     .withStyle(ChatFormatting.GOLD));
@@ -163,9 +164,9 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         }
         long t = level.getGameTime() - present.openStart;
         if (t == Unwrap.LID_POP) {
-            PresentSounds.play(serverLevel, pos, "present.pop", 1.0f);
+            serverLevel.playSound(null, pos, SoundEvents.BUNDLE_DROP_CONTENTS, SoundSource.BLOCKS, 1.0f, 1.1f);
         } else if (t == Unwrap.GIFTS) {
-            PresentSounds.play(serverLevel, pos, "present.reveal", 1.0f);
+            serverLevel.playSound(null, pos, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.2f, 1.2f);
         } else if (t >= Unwrap.TICKS) {
             present.finishOpening(serverLevel);
         }
@@ -213,7 +214,7 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
             entity.setDefaultPickUpDelay();
             serverLevel.addFreshEntity(entity);
         }
-        serverLevel.playSound(null, worldPosition, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 0.6f, 1.2f);
+        serverLevel.playSound(null, worldPosition, SoundEvents.PLAYER_LEVELUP, SoundSource.BLOCKS, 0.5f, 1.6f);
         openStart = -1;
         opener = null;
         serverLevel.removeBlock(worldPosition, false);

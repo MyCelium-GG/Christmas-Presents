@@ -35,9 +35,5 @@
   "christmaspresents.config.anyoneCanOpen": "Tout le monde peut ouvrir",
   "christmaspresents.config.anyoneCanOpen.desc": "N'importe qui peut ouvrir n'importe quel cadeau, pas seulement le joueur de l'étiquette.",
   "christmaspresents.missing_mycel": "Mycel est manquant. %s a besoin de la bibliothèque Mycel et reste désactivé tant qu'elle n'est pas installée.",
-  "christmaspresents.missing_mycel.download": "[Télécharger Mycel]",
-  "subtitles.christmaspresents.present.unwrap": "Cadeau déballé",
-  "subtitles.christmaspresents.present.pop": "Le couvercle du cadeau saute",
-  "subtitles.christmaspresents.present.reveal": "Les cadeaux scintillent",
-  "subtitles.christmaspresents.present.wrap": "Cadeau emballé"
+  "christmaspresents.missing_mycel.download": "[Télécharger Mycel]"
 }
