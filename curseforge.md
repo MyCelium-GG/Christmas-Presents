@@ -2,7 +2,7 @@
 
 **Christmas Presents** lets you wrap real presents for your friends. Put up to five gifts inside, design the wrapping yourself, write who it is for, and leave it under the tree. When they open it, they walk up to it and unwrap it with their own hands: the bow comes undone, the lid flies off and the gifts rise out of the box.
 
-![Unwrapping a present in first person: both hands lift the red lid off the box](https://raw.githubusercontent.com/MyCelium-GG/Christmas-Presents/main/docs/img/shots/unwrapping.png)
+![Unwrapping a present in first person: both hands lift the red lid off the box](https://wiki.mycelium-gg.org/christmaspresents/img/unwrapping.png)
 
 ## Wrap a present
 
@@ -16,7 +16,7 @@
    - Or press **Surprise me** for a random look
 4. Write the name of the player it is for in **To:**, and press **Wrap it!**
 
-![The wrapping menu: five gift slots, paper and ribbon colours, pattern, box shape, bow, a live preview and the To field](https://raw.githubusercontent.com/MyCelium-GG/Christmas-Presents/main/docs/img/shots/wrapping-menu.png)
+![The wrapping menu: five gift slots, paper and ribbon colours, pattern, box shape, bow, a live preview and the To field](https://wiki.mycelium-gg.org/christmaspresents/img/wrapping-menu.png)
 
 Everyone nearby sees the present change while you design it, and a little tag on the front shows the name.
 
@@ -26,7 +26,7 @@ Right-click a present with your name on it. You step up to it and open it with b
 
 If a present is not for you, it does not open: you get bumped back, the present wobbles and tells you whose it is. No peeking.
 
-![Five wrapped presents in different colours, shapes and bows, each with a name tag](https://raw.githubusercontent.com/MyCelium-GG/Christmas-Presents/main/docs/img/shots/presents.png)
+![Five wrapped presents in different colours, shapes and bows, each with a name tag](https://wiki.mycelium-gg.org/christmaspresents/img/presents.png)
 
 ## Good to know
 
