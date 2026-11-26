@@ -14,7 +14,8 @@
    - **Box:** cube, tall, wide or small
    - **Bow:** a classic bow, a big bow, a round rosette or a simple knot
    - Or press **Surprise me** for a random look
-4. Write the name of the player it is for in **To:**, and press **Wrap it!**
+4. Pick when it may be opened with **Opens:**: any time, Christmas Eve, Christmas Day or New Year
+5. Write the name of the player it is for in **To:**, and press **Wrap it!**
 
 ![The wrapping menu: five gift slots, paper and ribbon colours, pattern, box shape, bow, a live preview and the To field](docs/img/shots/wrapping-menu.png)
 
@@ -26,13 +27,15 @@ Right-click a present with your name on it. You step up to it and open it with b
 
 If a present is not for you, it does not open: you get bumped back, the present wobbles and tells you whose it is. No peeking.
 
+Locked until Christmas? Then it stays shut even for you. Try anyway and it wobbles and tells you how many days are left. The day is written on the name tag, so everyone knows when to come back.
+
 ![Five wrapped presents in different colours, shapes and bows, each with a name tag](docs/img/shots/presents.png)
 
 ## Good to know
 
 - A present keeps everything when you break it: its gifts, look and name. Pick it up, carry it to the tree, place it again
 - Whoever wrapped a present can sneak + right-click it to unwrap it again and change something
-- Settings: only open presents from December 24 to 26 (with a countdown until then), or let anyone open any present
+- Server settings: only open any present from December 24 to 26 (with a countdown until then), or let anyone open any present
 - Works in singleplayer and on servers. Install it on the server and on every player's game
 - Fabric, Forge and NeoForge, Minecraft 26.1 to 26.3
 - Requires [Mycel](https://www.curseforge.com/minecraft/mc-mods/mycel). Without it the game still starts, and Christmas Presents tells you in chat that Mycel is missing
