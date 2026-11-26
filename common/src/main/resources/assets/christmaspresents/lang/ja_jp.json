@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "誰でも開けられる",
   "christmaspresents.config.anyoneCanOpen.desc": "タグの名前のプレイヤーだけでなく、誰でもどのプレゼントでも開けられます。",
   "christmaspresents.missing_mycel": "Mycel がありません。%s は Mycel ライブラリが必要で、インストールされるまで動作しません。",
-  "christmaspresents.missing_mycel.download": "[Mycel をダウンロード]"
+  "christmaspresents.missing_mycel.download": "[Mycel をダウンロード]",
+  "christmaspresents.menu.lock": "開封日: %s",
+  "christmaspresents.menu.lock.tip": "サーバーの日付でいつから開けられるか。その日までは受け取る人でも開けられません。",
+  "christmaspresents.lock.any_time": "いつでも",
+  "christmaspresents.lock.christmas_eve": "クリスマスイブ",
+  "christmaspresents.lock.christmas_day": "クリスマス",
+  "christmaspresents.lock.new_year": "お正月",
+  "christmaspresents.lock.christmas_eve.date": "12月24日",
+  "christmaspresents.lock.christmas_day.date": "12月25日",
+  "christmaspresents.lock.new_year.date": "1月1日",
+  "christmaspresents.tooltip.lock": "%sまで開けないでね",
+  "christmaspresents.too_early": "のぞき見禁止! あと%s日で開けられます。",
+  "christmaspresents.too_early.tomorrow": "のぞき見禁止! 明日開けられます。"
 }

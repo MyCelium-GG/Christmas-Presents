@@ -53,6 +53,9 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
     private String to = "";
     private String from = "";
     private boolean wrapped;
+    private Calendar.Lock lock = Calendar.Lock.ANY_TIME;
+    /** Epoch day it may be opened from, fixed when it is wrapped; -1 for any time. */
+    private long opensOn = -1;
     private long openStart = -1;
     private UUID opener;
     private long wobbleStart = -100;
@@ -88,6 +91,15 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         return wrapped;
     }
 
+    public Calendar.Lock lock() {
+        return lock;
+    }
+
+    /** Whole days until it may be opened, by the server's date; 0 or less when it may open now. */
+    long daysLeft() {
+        return wrapped ? Calendar.daysLeft(opensOn, java.time.LocalDate.now()) : 0;
+    }
+
     public boolean opening() {
         return openStart >= 0;
     }
@@ -116,9 +128,10 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
 
     // ---- changes made from the wrapping menu (server)
 
-    void setStyle(PresentStyle value, String recipient) {
+    void setStyle(PresentStyle value, String recipient, Calendar.Lock until) {
         style = value;
         to = Names.clean(recipient);
+        lock = until;
         if (level != null && getBlockState().getValue(PresentBlock.SHAPE) != value.shape()) {
             level.setBlock(worldPosition, getBlockState().setValue(PresentBlock.SHAPE, value.shape()), 3);
         }
@@ -128,6 +141,7 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
     void wrap(ServerPlayer player) {
         wrapped = true;
         from = player.getGameProfile().name();
+        opensOn = Calendar.opensOn(lock, java.time.LocalDate.now());
         sync();
     }
 
@@ -244,6 +258,8 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         to = input.getStringOr("To", "");
         from = input.getStringOr("From", "");
         wrapped = input.getBooleanOr("Wrapped", false);
+        lock = Calendar.Lock.of(input.getStringOr("Lock", ""));
+        opensOn = input.getLongOr("OpensOn", -1L);
         openStart = input.getLongOr("OpenStart", -1L);
         opener = input.read("Opener", UUIDUtil.CODEC).orElse(null);
     }
@@ -263,13 +279,15 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         output.putString("To", to);
         output.putString("From", from);
         output.putBoolean("Wrapped", wrapped);
+        output.putString("Lock", lock.id());
+        output.putLong("OpensOn", opensOn);
         output.putLong("OpenStart", openStart);
         if (opener != null) {
             output.store("Opener", UUIDUtil.CODEC, opener);
         }
     }
 
-    /** Block event 1: someone who is not the recipient tried to open it; the present wobbles. */
+    /** Block event 1: someone tried to open it who may not (yet); the present wobbles. */
     @Override
     public boolean triggerEvent(int id, int param) {
         if (id == 1) {
@@ -313,6 +331,8 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
             to = tag.getStringOr("To", "");
             from = tag.getStringOr("From", "");
             wrapped = tag.getBooleanOr("Wrapped", false);
+            lock = Calendar.Lock.of(tag.getStringOr("Lock", ""));
+            opensOn = tag.getLongOr("OpensOn", -1L);
         }
     }
 
@@ -325,8 +345,10 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
         tag.putString("To", to);
         tag.putString("From", from);
         tag.putBoolean("Wrapped", wrapped);
+        tag.putString("Lock", lock.id());
+        tag.putLong("OpensOn", opensOn);
         components.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
-        ItemLore lore = PresentItems.lore(to, from, wrapped);
+        ItemLore lore = PresentItems.lore(to, from, wrapped, lock);
         if (!lore.lines().isEmpty()) {
             components.set(DataComponents.LORE, lore);
         }
@@ -338,7 +360,7 @@ public final class PresentBlockEntity extends BlockEntity implements Container {
     @Override
     public void removeComponentsFromTag(ValueOutput output) {
         super.removeComponentsFromTag(output);
-        for (String key : new String[] {"Items", "Paper", "Ribbon", "Pattern", "Bow", "To", "From", "Wrapped", "OpenStart", "Opener"}) {
+        for (String key : new String[] {"Items", "Paper", "Ribbon", "Pattern", "Bow", "To", "From", "Wrapped", "Lock", "OpensOn", "OpenStart", "Opener"}) {
             output.discard(key);
         }
     }

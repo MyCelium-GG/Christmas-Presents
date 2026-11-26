@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Każdy może otworzyć",
   "christmaspresents.config.anyoneCanOpen.desc": "Każdy może otworzyć każdy prezent, nie tylko gracz z bileciku.",
   "christmaspresents.missing_mycel": "Brakuje Mycel. %s potrzebuje biblioteki Mycel i pozostaje wyłączony, dopóki jej nie zainstalujesz.",
-  "christmaspresents.missing_mycel.download": "[Pobierz Mycel]"
+  "christmaspresents.missing_mycel.download": "[Pobierz Mycel]",
+  "christmaspresents.menu.lock": "Otwarcie: %s",
+  "christmaspresents.menu.lock.tip": "Od kiedy można go otworzyć, według daty serwera. Do tego dnia zostaje zamknięty, nawet dla obdarowanego.",
+  "christmaspresents.lock.any_time": "Kiedykolwiek",
+  "christmaspresents.lock.christmas_eve": "Wigilia",
+  "christmaspresents.lock.christmas_day": "Boże Narodzenie",
+  "christmaspresents.lock.new_year": "Nowy Rok",
+  "christmaspresents.lock.christmas_eve.date": "24 gru",
+  "christmaspresents.lock.christmas_day.date": "25 gru",
+  "christmaspresents.lock.new_year.date": "1 sty",
+  "christmaspresents.tooltip.lock": "Nie otwierać przed %s",
+  "christmaspresents.too_early": "Bez podglądania! Otworzysz go za %s dni.",
+  "christmaspresents.too_early.tomorrow": "Bez podglądania! Otworzysz go jutro."
 }

@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Jeder darf öffnen",
   "christmaspresents.config.anyoneCanOpen.desc": "Jeder kann jedes Geschenk öffnen, nicht nur der Spieler auf dem Anhänger.",
   "christmaspresents.missing_mycel": "Mycel fehlt. %s braucht die Mycel-Bibliothek und bleibt aus, bis sie installiert ist.",
-  "christmaspresents.missing_mycel.download": "[Mycel herunterladen]"
+  "christmaspresents.missing_mycel.download": "[Mycel herunterladen]",
+  "christmaspresents.menu.lock": "Öffnen: %s",
+  "christmaspresents.menu.lock.tip": "Ab wann es geöffnet werden darf, nach dem Datum des Servers. Bis dahin bleibt es zu, auch für den Beschenkten.",
+  "christmaspresents.lock.any_time": "Jederzeit",
+  "christmaspresents.lock.christmas_eve": "Heiligabend",
+  "christmaspresents.lock.christmas_day": "1. Weihnachtstag",
+  "christmaspresents.lock.new_year": "Neujahr",
+  "christmaspresents.lock.christmas_eve.date": "24. Dez.",
+  "christmaspresents.lock.christmas_day.date": "25. Dez.",
+  "christmaspresents.lock.new_year.date": "1. Jan.",
+  "christmaspresents.tooltip.lock": "Nicht öffnen vor dem %s",
+  "christmaspresents.too_early": "Nicht schummeln! Noch %s Tage bis zum Öffnen.",
+  "christmaspresents.too_early.tomorrow": "Nicht schummeln! Morgen darfst du es öffnen."
 }

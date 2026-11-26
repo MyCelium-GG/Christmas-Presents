@@ -2,6 +2,7 @@ package my.celium.org.christmaspresents.client;
 
 import com.mojang.blaze3d.platform.InputConstants;
 
+import my.celium.org.christmaspresents.Calendar;
 import my.celium.org.christmaspresents.ChristmasPresentsMod;
 import my.celium.org.christmaspresents.Names;
 import my.celium.org.christmaspresents.PresentBlockEntity;
@@ -41,7 +42,9 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
     private final BlockPos pos;
     private PresentStyle style = PresentStyle.DEFAULT;
     private String to = "";
+    private Calendar.Lock lock = Calendar.Lock.ANY_TIME;
     private Button patternButton;
+    private Button lockButton;
     private Button shapeButton;
     private Button bowButton;
     private EditBox nameBox;
@@ -53,6 +56,7 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
         if (pos != null && inventory.player.level().getBlockEntity(pos) instanceof PresentBlockEntity present) {
             style = present.style();
             to = present.to();
+            lock = present.lock();
         }
     }
 
@@ -77,7 +81,14 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
                 .bounds(x + 71, y + 90, 64, 18)
                 .tooltip(Tooltip.create(Component.translatable("christmaspresents.menu.surprise.tip")))
                 .build());
-        nameBox = new EditBox(font, x + 24, y + 113, 110, 14, Component.translatable("christmaspresents.menu.to"));
+        lockButton = addRenderableWidget(Button.builder(Component.empty(), b -> {
+            lock = PresentStyle.cycle(lock, 1);
+            refreshLabels();
+            send();
+        }).bounds(x + 5, y + 110, 130, 18)
+                .tooltip(Tooltip.create(Component.translatable("christmaspresents.menu.lock.tip")))
+                .build());
+        nameBox = new EditBox(font, x + 24, y + 134, 110, 14, Component.translatable("christmaspresents.menu.to"));
         nameBox.setMaxLength(Names.MAX);
         nameBox.setValue(to);
         nameBox.setHint(Component.translatable("christmaspresents.menu.to.hint"));
@@ -100,6 +111,8 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
         patternButton.setMessage(Component.translatable("christmaspresents.pattern." + style.pattern().id()));
         shapeButton.setMessage(Component.translatable("christmaspresents.shape." + style.shape().id()));
         bowButton.setMessage(Component.translatable("christmaspresents.bow." + style.bow().id()));
+        lockButton.setMessage(Component.translatable("christmaspresents.menu.lock",
+                Component.translatable("christmaspresents.lock." + lock.id())));
     }
 
     private void change(PresentStyle next) {
@@ -125,7 +138,7 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
 
     private void send() {
         if (pos != null) {
-            MycelNetwork.sendToServer(ChristmasPresentsMod.edit, PresentPackets.Edit.of(pos, style, to));
+            MycelNetwork.sendToServer(ChristmasPresentsMod.edit, PresentPackets.Edit.of(pos, style, to, lock));
         }
     }
 
@@ -152,10 +165,10 @@ public final class PresentScreen extends AbstractContainerScreen<HopperMenu> {
         graphics.blit(RenderPipelines.GUI_TEXTURED, HOPPER, leftPos, topPos, 0, 0, 176, 133, 256, 256);
         int x = leftPos + PANEL_X;
         int y = topPos;
-        panel(graphics, x, y, PANEL_W, 133);
+        panel(graphics, x, y, PANEL_W, 155);
         graphics.text(font, Component.translatable("christmaspresents.menu.paper"), x + 6, y + 6, 0xFF404040, false);
         graphics.text(font, Component.translatable("christmaspresents.menu.ribbon"), x + 6, y + 38, 0xFF404040, false);
-        graphics.text(font, Component.translatable("christmaspresents.menu.to"), x + 6, y + 116, 0xFF404040, false);
+        graphics.text(font, Component.translatable("christmaspresents.menu.to"), x + 6, y + 137, 0xFF404040, false);
 
         // The preview: the present item with the chosen look, big.
         int px = x + 84;

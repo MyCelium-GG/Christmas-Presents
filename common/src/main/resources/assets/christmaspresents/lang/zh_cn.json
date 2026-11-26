@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "任何人都能打开",
   "christmaspresents.config.anyoneCanOpen.desc": "任何人都能打开任何礼物,而不只是标签上的玩家。",
   "christmaspresents.missing_mycel": "缺少 Mycel。%s 需要 Mycel 库才能运行，安装前不会生效。",
-  "christmaspresents.missing_mycel.download": "[下载 Mycel]"
+  "christmaspresents.missing_mycel.download": "[下载 Mycel]",
+  "christmaspresents.menu.lock": "开启: %s",
+  "christmaspresents.menu.lock.tip": "按服务器日期，从哪天起可以打开。在那天之前，即使是收礼人也打不开。",
+  "christmaspresents.lock.any_time": "随时",
+  "christmaspresents.lock.christmas_eve": "平安夜",
+  "christmaspresents.lock.christmas_day": "圣诞节",
+  "christmaspresents.lock.new_year": "新年",
+  "christmaspresents.lock.christmas_eve.date": "12月24日",
+  "christmaspresents.lock.christmas_day.date": "12月25日",
+  "christmaspresents.lock.new_year.date": "1月1日",
+  "christmaspresents.tooltip.lock": "%s之前请勿打开",
+  "christmaspresents.too_early": "不许偷看！还有%s天才能打开。",
+  "christmaspresents.too_early.tomorrow": "不许偷看！明天就能打开了。"
 }

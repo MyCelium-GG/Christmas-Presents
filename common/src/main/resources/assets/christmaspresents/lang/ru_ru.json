@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Открыть может любой",
   "christmaspresents.config.anyoneCanOpen.desc": "Любой игрок может открыть любой подарок, а не только тот, чьё имя на бирке.",
   "christmaspresents.missing_mycel": "Mycel не установлен. %s нужна библиотека Mycel, без неё мод не работает.",
-  "christmaspresents.missing_mycel.download": "[Скачать Mycel]"
+  "christmaspresents.missing_mycel.download": "[Скачать Mycel]",
+  "christmaspresents.menu.lock": "Открыть: %s",
+  "christmaspresents.menu.lock.tip": "С какого дня его можно открыть, по дате сервера. До этого дня он закрыт, даже для получателя.",
+  "christmaspresents.lock.any_time": "В любое время",
+  "christmaspresents.lock.christmas_eve": "Сочельник",
+  "christmaspresents.lock.christmas_day": "Рождество",
+  "christmaspresents.lock.new_year": "Новый год",
+  "christmaspresents.lock.christmas_eve.date": "24 дек.",
+  "christmaspresents.lock.christmas_day.date": "25 дек.",
+  "christmaspresents.lock.new_year.date": "1 янв.",
+  "christmaspresents.tooltip.lock": "Не открывать до %s",
+  "christmaspresents.too_early": "Не подглядывай! Откроется через %s дн.",
+  "christmaspresents.too_early.tomorrow": "Не подглядывай! Откроется завтра."
 }

@@ -48,6 +48,25 @@ class PresentLogicTest {
     }
 
     @Test
+    void lockedPresentsOpenOnTheNextMatchingDay() {
+        LocalDate nov26 = LocalDate.of(2026, 11, 26);
+        assertEquals(-1, Calendar.opensOn(Calendar.Lock.ANY_TIME, nov26));
+        assertEquals(LocalDate.of(2026, 12, 25).toEpochDay(), Calendar.opensOn(Calendar.Lock.CHRISTMAS_DAY, nov26));
+        assertEquals(LocalDate.of(2027, 1, 1).toEpochDay(), Calendar.opensOn(Calendar.Lock.NEW_YEAR, nov26));
+        // Wrapped on the day itself: opens right away. Wrapped after it: next year.
+        LocalDate dec25 = LocalDate.of(2026, 12, 25);
+        assertEquals(dec25.toEpochDay(), Calendar.opensOn(Calendar.Lock.CHRISTMAS_DAY, dec25));
+        assertEquals(LocalDate.of(2027, 12, 24).toEpochDay(), Calendar.opensOn(Calendar.Lock.CHRISTMAS_EVE, dec25));
+        long opens = Calendar.opensOn(Calendar.Lock.CHRISTMAS_EVE, nov26);
+        assertEquals(28, Calendar.daysLeft(opens, nov26));
+        assertEquals(1, Calendar.daysLeft(opens, LocalDate.of(2026, 12, 23)));
+        assertTrue(Calendar.daysLeft(opens, LocalDate.of(2026, 12, 24)) <= 0);
+        assertEquals(0, Calendar.daysLeft(-1, nov26));
+        assertEquals(Calendar.Lock.NEW_YEAR, Calendar.Lock.of("new_year"));
+        assertEquals(Calendar.Lock.ANY_TIME, Calendar.Lock.of("nonsense"));
+    }
+
+    @Test
     void namesKeepOnlyNameCharacters() {
         assertEquals("Steve_2", Names.clean("  Ste ve_2! "));
         assertEquals("abcdefghijklmnop", Names.clean("abcdefghijklmnopqrst"));

@@ -8,6 +8,7 @@ import org.joml.Quaternionf;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 import my.celium.org.christmaspresents.ChristmasPresentsMod;
+import my.celium.org.christmaspresents.Calendar;
 import my.celium.org.christmaspresents.PresentBlock;
 import my.celium.org.christmaspresents.PresentBlockEntity;
 import my.celium.org.christmaspresents.PresentStyle;
@@ -61,6 +62,7 @@ public final class PresentRenderer implements BlockEntityRenderer<PresentBlockEn
         float wobble = 100;
         boolean mine;
         String to = "";
+        Calendar.Lock lock = Calendar.Lock.ANY_TIME;
         final List<ItemStackRenderState> gifts = new ArrayList<>();
     }
 
@@ -80,6 +82,7 @@ public final class PresentRenderer implements BlockEntityRenderer<PresentBlockEn
         var me = net.minecraft.client.Minecraft.getInstance().player;
         state.mine = me != null && me.getUUID().equals(present.opener());
         state.to = present.to();
+        state.lock = present.lock();
         state.gifts.clear();
         if (state.time >= Unwrap.GIFTS) {
             int seed = (int) present.getBlockPos().asLong();
@@ -118,33 +121,51 @@ public final class PresentRenderer implements BlockEntityRenderer<PresentBlockEn
         model.submit(collector, pose, RenderTypes.entityCutout(texture(state.style.pattern().id())),
                 RenderTypes.entityCutout(RIBBON), 0xFF000000 | state.style.paper(), 0xFF000000 | state.style.ribbon(),
                 state.style.bow(), unwrap, light);
-        boolean showTag = !state.to.isEmpty() && unwrap < 0;
+        boolean showTag = (!state.to.isEmpty() || state.lock != Calendar.Lock.ANY_TIME) && unwrap < 0;
         if (showTag) {
             ClientCompat.part(collector, model.tag, pose, RenderTypes.entityCutout(TAG), light,
                     OverlayTexture.NO_OVERLAY, 0xFFFFFFFF);
         }
         pose.popPose();
         if (showTag) {
-            submitName(state, pose, collector, light);
+            submitTag(state, pose, collector, light);
         }
         submitGifts(state, unwrap, pose, collector, light);
         pose.popPose();
     }
 
-    /** The recipient's name on the tag, as big as fits. */
-    private void submitName(State state, PoseStack pose, SubmitNodeCollector collector, int light) {
+    /**
+     * The tag's writing: the recipient's name, as big as fits, and below it in small red letters
+     * the day it may be opened, if the present is locked. The card is 4 pixels tall.
+     */
+    private void submitTag(State state, PoseStack pose, SubmitNodeCollector collector, int light) {
+        PresentStyle.Shape shape = state.style.shape();
+        float cardTop = shape.height + 0.5f - shape.lid - 0.4f;
+        boolean locked = state.lock != Calendar.Lock.ANY_TIME;
+        if (!state.to.isEmpty()) {
+            submitLine(Component.literal(state.to), state, pose, collector, light,
+                    locked ? cardTop - 1.35f : cardTop - 2, locked ? 0.0085f : 0.011f, 0xFF8E1B1B);
+        }
+        if (locked) {
+            submitLine(Component.translatable("christmaspresents.lock." + state.lock.id() + ".date"), state, pose,
+                    collector, light, state.to.isEmpty() ? cardTop - 2 : cardTop - 3.15f, 0.0065f, 0xFFB71C1C);
+        }
+    }
+
+    /** One line of text centred on the tag at height {@code centre} (pixels), as big as fits up to {@code maxScale}. */
+    private void submitLine(Component line, State state, PoseStack pose, SubmitNodeCollector collector, int light,
+            float centre, float maxScale, int color) {
         PresentStyle.Shape shape = state.style.shape();
         PresentModel model = PresentModel.of(shape);
-        float cardTop = shape.height + 0.5f - shape.lid - 0.4f;
-        FormattedCharSequence text = Component.literal(state.to).getVisualOrderText();
+        FormattedCharSequence text = line.getVisualOrderText();
         int width = Math.max(1, font.width(text));
-        float scale = Math.min(0.011f, (model.tagWidth - 0.8f) / 16f / width);
+        float scale = Math.min(maxScale, (model.tagWidth - 0.8f) / 16f / width);
         pose.pushPose();
-        pose.translate(0, (cardTop - 2) / 16f, (shape.depth / 2f + 0.47f) / 16f);
+        pose.translate(0, centre / 16f, (shape.depth / 2f + 0.47f) / 16f);
         ClientCompat.rotate(pose, new Quaternionf().rotationZ(PresentModel.TAG_TILT));
         pose.scale(scale, -scale, scale);
         collector.submitText(pose, -width / 2f, -font.lineHeight / 2f + 1, text, false, Font.DisplayMode.POLYGON_OFFSET,
-                light, 0xFF8E1B1B, 0, 0);
+                light, color, 0, 0);
         pose.popPose();
     }
 

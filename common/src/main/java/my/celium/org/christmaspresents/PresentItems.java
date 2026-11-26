@@ -44,13 +44,18 @@ public final class PresentItems {
         return data == null ? PresentStyle.DEFAULT : styleOf(data);
     }
 
-    public static ItemLore lore(String to, String from, boolean wrapped) {
+    public static ItemLore lore(String to, String from, boolean wrapped, Calendar.Lock lock) {
         List<Component> lines = new ArrayList<>();
         if (!to.isEmpty()) {
             lines.add(line("christmaspresents.tooltip.to", to));
         }
         if (wrapped && !from.isEmpty()) {
             lines.add(line("christmaspresents.tooltip.from", from));
+        }
+        if (lock != Calendar.Lock.ANY_TIME) {
+            lines.add(Component.translatable("christmaspresents.tooltip.lock",
+                            Component.translatable("christmaspresents.lock." + lock.id() + ".date").withStyle(ChatFormatting.WHITE))
+                    .withStyle(style -> style.withItalic(false)).withStyle(ChatFormatting.RED));
         }
         if (!wrapped) {
             lines.add(Component.translatable("christmaspresents.tooltip.unwrapped")

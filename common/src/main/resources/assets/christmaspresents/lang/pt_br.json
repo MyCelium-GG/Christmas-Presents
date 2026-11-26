@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Qualquer um pode abrir",
   "christmaspresents.config.anyoneCanOpen.desc": "Qualquer um pode abrir qualquer presente, não só o jogador da etiqueta.",
   "christmaspresents.missing_mycel": "Mycel não está instalado. %s precisa da biblioteca Mycel e fica desligado até ela ser instalada.",
-  "christmaspresents.missing_mycel.download": "[Baixar Mycel]"
+  "christmaspresents.missing_mycel.download": "[Baixar Mycel]",
+  "christmaspresents.menu.lock": "Abre: %s",
+  "christmaspresents.menu.lock.tip": "Quando pode ser aberto, pela data do servidor. Até esse dia ele fica fechado, mesmo para quem vai ganhar.",
+  "christmaspresents.lock.any_time": "A qualquer hora",
+  "christmaspresents.lock.christmas_eve": "Véspera de Natal",
+  "christmaspresents.lock.christmas_day": "Natal",
+  "christmaspresents.lock.new_year": "Ano Novo",
+  "christmaspresents.lock.christmas_eve.date": "24 dez",
+  "christmaspresents.lock.christmas_day.date": "25 dez",
+  "christmaspresents.lock.new_year.date": "1 jan",
+  "christmaspresents.tooltip.lock": "Não abrir antes de %s",
+  "christmaspresents.too_early": "Nada de espiar! Abre em %s dias.",
+  "christmaspresents.too_early.tomorrow": "Nada de espiar! Abre amanhã."
 }

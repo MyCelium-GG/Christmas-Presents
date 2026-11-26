@@ -19,7 +19,7 @@ public final class PresentPackets {
      * Client to server: the present's new look and who it is for. Sent on every change in the
      * menu, so everyone nearby sees the present change while it is being wrapped.
      */
-    public record Edit(BlockPos pos, int paper, int ribbon, String pattern, String shape, String bow, String to)
+    public record Edit(BlockPos pos, int paper, int ribbon, String pattern, String shape, String bow, String to, String lock)
             implements CustomPacketPayload {
         public static final Type<Edit> TYPE = new Type<>(Identifier.fromNamespaceAndPath(ChristmasPresentsMod.ID, "edit"));
         public static final StreamCodec<FriendlyByteBuf, Edit> CODEC = StreamCodec.of(
@@ -31,13 +31,14 @@ public final class PresentPackets {
                     buf.writeUtf(p.shape, 16);
                     buf.writeUtf(p.bow, 16);
                     buf.writeUtf(p.to, 32);
+                    buf.writeUtf(p.lock, 16);
                 },
                 buf -> new Edit(buf.readBlockPos(), buf.readInt(), buf.readInt(), buf.readUtf(16), buf.readUtf(16),
-                        buf.readUtf(16), buf.readUtf(32)));
+                        buf.readUtf(16), buf.readUtf(32), buf.readUtf(16)));
 
-        public static Edit of(BlockPos pos, PresentStyle style, String to) {
+        public static Edit of(BlockPos pos, PresentStyle style, String to, Calendar.Lock lock) {
             return new Edit(pos, style.paper(), style.ribbon(), style.pattern().id(), style.shape().id(),
-                    style.bow().id(), to);
+                    style.bow().id(), to, lock.id());
         }
 
         PresentStyle style() {
@@ -66,7 +67,7 @@ public final class PresentPackets {
     static void handleEdit(Edit packet, ServerPlayer player) {
         PresentBlockEntity present = editable(player, packet.pos());
         if (present != null) {
-            present.setStyle(packet.style(), packet.to());
+            present.setStyle(packet.style(), packet.to(), Calendar.Lock.of(packet.lock()));
         }
     }
 

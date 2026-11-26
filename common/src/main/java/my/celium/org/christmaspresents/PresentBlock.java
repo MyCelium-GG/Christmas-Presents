@@ -7,6 +7,7 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -149,6 +150,11 @@ public final class PresentBlock extends Block implements EntityBlock {
             turnAway(serverPlayer, present, level, pos, state);
             return InteractionResult.CONSUME;
         }
+        long daysLeft = present.daysLeft();
+        if (daysLeft > 0) {
+            tooEarly(serverPlayer, daysLeft, level, pos, state);
+            return InteractionResult.CONSUME;
+        }
         String wait = Calendar.waitMessage();
         if (wait != null) {
             serverPlayer.sendOverlayMessage(Component.translatable(wait, Calendar.daysUntilChristmas())
@@ -174,6 +180,16 @@ public final class PresentBlock extends Block implements EntityBlock {
         level.blockEvent(pos, state.getBlock(), 1, 0);
         player.sendOverlayMessage(Component.translatable("christmaspresents.not_for_you", present.to())
                 .withStyle(ChatFormatting.RED));
+    }
+
+    /** Yours, but not yet: it wobbles and rattles, and says how long to wait. No bump. */
+    private static void tooEarly(ServerPlayer player, long daysLeft, Level level, BlockPos pos, BlockState state) {
+        level.playSound(null, pos, SoundEvents.CHEST_LOCKED, SoundSource.BLOCKS, 1.0f, 1.3f);
+        level.blockEvent(pos, state.getBlock(), 1, 0);
+        MutableComponent message = daysLeft == 1
+                ? Component.translatable("christmaspresents.too_early.tomorrow")
+                : Component.translatable("christmaspresents.too_early", daysLeft);
+        player.sendOverlayMessage(message.withStyle(ChatFormatting.GOLD));
     }
 
     @Override

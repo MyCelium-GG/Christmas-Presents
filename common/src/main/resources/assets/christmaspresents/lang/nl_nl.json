@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Iedereen mag openen",
   "christmaspresents.config.anyoneCanOpen.desc": "Iedereen kan elk cadeau openen, niet alleen de speler op het label.",
   "christmaspresents.missing_mycel": "Mycel ontbreekt. %s heeft de Mycel-bibliotheek nodig en blijft uit tot die is geïnstalleerd.",
-  "christmaspresents.missing_mycel.download": "[Mycel downloaden]"
+  "christmaspresents.missing_mycel.download": "[Mycel downloaden]",
+  "christmaspresents.menu.lock": "Open: %s",
+  "christmaspresents.menu.lock.tip": "Vanaf wanneer het open mag, volgens de datum van de server. Tot die dag blijft het dicht, ook voor wie het krijgt.",
+  "christmaspresents.lock.any_time": "Altijd",
+  "christmaspresents.lock.christmas_eve": "Kerstavond",
+  "christmaspresents.lock.christmas_day": "Eerste kerstdag",
+  "christmaspresents.lock.new_year": "Nieuwjaar",
+  "christmaspresents.lock.christmas_eve.date": "24 dec",
+  "christmaspresents.lock.christmas_day.date": "25 dec",
+  "christmaspresents.lock.new_year.date": "1 jan",
+  "christmaspresents.tooltip.lock": "Niet openen voor %s",
+  "christmaspresents.too_early": "Niet stiekem kijken! Nog %s dagen tot het open mag.",
+  "christmaspresents.too_early.tomorrow": "Niet stiekem kijken! Morgen mag het open."
 }

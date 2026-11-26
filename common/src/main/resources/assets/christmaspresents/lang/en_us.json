@@ -35,5 +35,17 @@
   "christmaspresents.config.anyoneCanOpen": "Anyone can open",
   "christmaspresents.config.anyoneCanOpen.desc": "Anyone can open any present, not only the player whose name is on it.",
   "christmaspresents.missing_mycel": "Mycel is missing. %s needs the Mycel library to work and stays off until it is installed.",
-  "christmaspresents.missing_mycel.download": "[Download Mycel]"
+  "christmaspresents.missing_mycel.download": "[Download Mycel]",
+  "christmaspresents.menu.lock": "Opens: %s",
+  "christmaspresents.menu.lock.tip": "When it may be opened, by the server's date. Until that day it stays shut, even for the player it is for.",
+  "christmaspresents.lock.any_time": "Any time",
+  "christmaspresents.lock.christmas_eve": "Christmas Eve",
+  "christmaspresents.lock.christmas_day": "Christmas Day",
+  "christmaspresents.lock.new_year": "New Year",
+  "christmaspresents.lock.christmas_eve.date": "Dec 24",
+  "christmaspresents.lock.christmas_day.date": "Dec 25",
+  "christmaspresents.lock.new_year.date": "Jan 1",
+  "christmaspresents.tooltip.lock": "Do not open until %s",
+  "christmaspresents.too_early": "No peeking! It opens in %s days.",
+  "christmaspresents.too_early.tomorrow": "No peeking! It opens tomorrow."
 }

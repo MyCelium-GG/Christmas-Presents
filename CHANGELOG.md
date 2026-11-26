@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.0] - 2026-11-26
+
+### Added
+- Do not open until: pick when a present may be opened in the wrapping menu (Any time, Christmas Eve, Christmas Day or New Year). Until that day it stays shut, even for the player it is for, and trying early makes it wobble and tells you how many days are left. The day is written on the name tag and in the tooltip.
+
 ## [1.0.0] - 2026-11-21
 
 ### Added
