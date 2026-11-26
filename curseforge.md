@@ -14,7 +14,7 @@
    - **Box:** cube, tall, wide or small
    - **Bow:** a classic bow, a big bow, a round rosette or a simple knot
    - Or press **Surprise me** for a random look
-4. Pick when it may be opened with **Opens:**: any time, Christmas Eve, Christmas Day or New Year
+4. Press **Opens** to pick when it may be opened: any time, Christmas Eve, Christmas Day or New Year
 5. Write the name of the player it is for in **To:**, and press **Wrap it!**
 
 ![The wrapping menu: five gift slots, paper and ribbon colours, pattern, box shape, bow, a live preview and the To field](https://wiki.mycelium-gg.org/christmaspresents/img/wrapping-menu.png)
